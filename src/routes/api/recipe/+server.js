@@ -6,15 +6,20 @@ import 'dotenv/config'
  * @type {import('@sveltejs/kit').RequestHandler}
  */
  export async function POST({ request }) {
-    const { entered_prompt } = await request.json()
-    console.log(entered_prompt)
+    const { tag_prompt,onlyIngredients } = await request.json()
     const configuration = new Configuration({
       apiKey: process.env.OPENAI_KEY,
     });
     const openai = new OpenAIApi(configuration);
+    let prompt = "";
+    if (onlyIngredients){
+        prompt = `Make me a recipe ONLY using the following ingredients ${tag_prompt?.toString()}`
+    } else {
+        prompt = `Make me a recipe using the following ingredients ${tag_prompt?.toString()}`
+    }
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `recipe ${entered_prompt?.toString()}`,
+      prompt: prompt,
       temperature: 0.9,
       max_tokens: 500,
       top_p: 1.0,
