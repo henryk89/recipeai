@@ -1,11 +1,12 @@
-<div class="hero min-h-screen bg-base-200">
+<div class="hero mt-12 text-base-350">
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Revolutionize Your Cooking</h1>
-        <p class="py-6">With Recipe AI, you can easily create a customized recipe that fits your specific ingredients, desired level of complexity, and time constraints. Simply enter your desired parameters and let the powerful OpenAI Davinci model do the rest, generating an easy-to-follow recipe that meets your exact needs. Whether you're a beginner cook or an experienced chef, Recipe AI has got you covered!</p>
-        <a href={data.whopUrl}>
-            <button class="btn btn-primary">Get Started</button>
-        </a>
+        <h1 class="text-5xl font-bold">Recipe AI</h1>
+        <div class='mt-4 grid gap-4'>
+          <div class="w-full bg-primary p-3 rounded-md">Make me a pizza recipe only using sliced bread and ketchup</div>
+          <div class="w-full bg-primary p-3 rounded-md">Write me a recipe using oreos, cheetos, and cheddar cheese</div>
+          <div class="w-full bg-primary p-3 rounded-md">Make me an easy dinner recipe that takes less than 1 hour to cook with simple ingredients</div>
+        </div>
       </div>
     </div>
   </div>
