@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cursor {
+    animation: blink 0.5s linear infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+        display: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
