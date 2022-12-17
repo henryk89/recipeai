@@ -1,4 +1,4 @@
-<div class="hero mt-12 text-base-350">
+<div class="hero mt-8 text-base-350">
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">Recipe AI</h1>
