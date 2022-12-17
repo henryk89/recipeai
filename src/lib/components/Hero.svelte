@@ -1,7 +1,7 @@
 <script>
     /** @type {import('./$types').PageData} */
     export let data;
-  </script>
+</script>
 
 <div class="hero min-h-screen bg-base-200">
     <div class="hero-content text-center">

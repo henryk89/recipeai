@@ -3,27 +3,27 @@
 @tailwind utilities;
 
 .cursor {
-    animation: blink 0.5s linear infinite;
-  }
-  
-  @keyframes blink {
-    0% {
-        display: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-  }
-
-.svelte-1wt3f13 {
-    border-radius: 0.5rem !important;
+	animation: blink 0.5s linear infinite;
 }
 
+@keyframes blink {
+	0% {
+		display: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Overriding default stylings for tag input */
+.svelte-1wt3f13 {
+	border-radius: 0.5rem !important;
+}
 .svelte-1wt3f13 span {
-    border-radius: 0.275rem !important;
-    background-color: hsl(var(--p) / var(--tw-bg-opacity)) !important;
-    color: hsla(var(--bc) / var(--tw-text-opacity, 1)) !important;
+	border-radius: 0.275rem !important;
+	background-color: hsl(var(--p) / var(--tw-bg-opacity)) !important;
+	color: hsla(var(--bc) / var(--tw-text-opacity, 1)) !important;
 }
