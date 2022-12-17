@@ -13,14 +13,14 @@ import 'dotenv/config'
     const openai = new OpenAIApi(configuration);
     let prompt = "";
     if (onlyIngredients){
-        prompt = `Make me a recipe ONLY using the following ingredients ${tag_prompt?.toString()}`
+        prompt = `Make me a recipe with only these ingredients: ${tag_prompt?.toString()}`
     } else {
-        prompt = `Make me a recipe using the following ingredients ${tag_prompt?.toString()}`
+        prompt = `Make me a recipe using the following ingredients: ${tag_prompt?.toString()}`
     }
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: prompt,
-      temperature: 0.9,
+      temperature: 0.8,
       max_tokens: 500,
       top_p: 1.0,
       frequency_penalty: 0.0,
