@@ -94,7 +94,7 @@ If the user is not logged in they are prompted to login -->
         </div>
     {:else}
         <!-- Redirects the user to checkout if they do not have the access pass -->
-        <script> window.location.href = "https://whop.com/checkout/plan_5QRxbXsHQYGmP?d2c=true" </script>
+        <script> window.location.href = "https://whop.com/checkout/plan_hEYRXN1Om1qOa?d2c=true" </script>
     {/if}
 {:else}
 <Hero {data}/>
