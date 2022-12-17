@@ -12,7 +12,7 @@
   let openai_response = "";
   let tag_prompt = "";
   /** @type String[]*/
-  let tags = [];
+  let tags = ['Cheese','Onion','Garlic'];
   /** @type String[]*/
   let submitedTags = [];
   let onlyIngredients = true;

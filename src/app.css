@@ -21,3 +21,9 @@
 .svelte-1wt3f13 {
     border-radius: 0.5rem !important;
 }
+
+.svelte-1wt3f13 span {
+    border-radius: 0.275rem !important;
+    background-color: hsl(var(--p) / var(--tw-bg-opacity)) !important;
+    color: hsla(var(--bc) / var(--tw-text-opacity, 1)) !important;
+}
