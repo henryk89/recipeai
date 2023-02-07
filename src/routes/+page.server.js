@@ -17,10 +17,30 @@ export async function load({ locals }) {
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-	prompt: async ({ request }) => {
+	prompt: async ({ request, cookies }) => {
 		const formData = await request.formData();
 		const prompt = formData.get('prompt');
 		const onlyIngredients = formData.get('onlyIngredients');
+		if (cookies.get('limit')){
+			const limit = cookies.get('limit') || 0;
+			const rate_limit = parseInt(limit.toString(), 10);
+			cookies.set('limit', `${rate_limit + 1}`);
+			if (rate_limit > 10) {
+				return {
+					success: true,
+					prompt: prompt,
+					onlyIngredients: onlyIngredients,
+					rateLimited: true
+				};
+			}
+		} else {
+			cookies.set('limit', "1", {
+				path: '/',
+				httpOnly: true,
+				sameSite: 'strict',
+				maxAge: 3600 * 1000
+			});
+		}
 		return {
 			success: true,
 			prompt: prompt,
